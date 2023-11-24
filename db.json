@@ -1,12 +1,13 @@
 {
-    "clientes":[
-        {
-            "nombre":"Leonardo",
-            "id":1
-        },
-        {
-            "nombre":"Ricardo",
-            "id":2
-        }
-    ]
+  "clientes": [
+    {
+      "nombre": "Leonardo",
+      "apellido": "Alonzo",
+      "email": "leonardo.a@cliker.mx",
+      "telefono": "999-999-9999",
+      "empresa": "Cliker",
+      "puesto": "Desarrollador web",
+      "id": 1
+    }
+  ]
 }
