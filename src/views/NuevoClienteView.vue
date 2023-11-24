@@ -23,6 +23,8 @@
             <div class="mx-auto md:w-2/3 py-20 px-6">
                 <FormKit
                     type="form"
+                    submit-label="Agregar Cliente"
+                    incomplete-message="No se pudo enviar, revisa los mensajes"
                 >
                     <FormKit 
                         type="text"
@@ -55,6 +57,26 @@
                         validation="?matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/"
                         :validation-messages="{matches:'El Formato no es Válido'}"
                     />
+
+                    <FormKit 
+                        type="text"
+                        label="Empresa"
+                        placeholder="Empresa de Cliente"
+                    />
+
+                    <FormKit 
+                        type="text"
+                        label="Puesto"
+                        placeholder="Puesto de Cliente"
+                    />
+
+                    <!-- 
+                        hay que agregar :actions="false" en las props del formulario
+                        <FormKit 
+                            type="submit"
+                            label="Agregar Cliente"
+                        /> 
+                    -->
                 </FormKit>
             </div>
         </div>
