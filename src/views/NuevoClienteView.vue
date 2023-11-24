@@ -45,15 +45,15 @@
                         label="Email"
                         placeholder="Email de Cliente"
                         validation="required|email"
-                        :validation-messages="{required:'El Email del Cliente es Obligatorio', email:'Coloca un email válido'}"
+                        :validation-messages="{required:'El Email del Cliente es Obligatorio', email:'Coloca un Email Válido'}"
                     />
 
                     <FormKit 
                         type="text"
                         label="Télefono"
                         placeholder="Télefono: XXX-XXX-XXXX"
-                        validation="required"
-                        :validation-messages="{required:'El Télefono del Cliente es Obligatorio'}"
+                        validation="?matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/"
+                        :validation-messages="{matches:'El Formato no es Válido'}"
                     />
                 </FormKit>
             </div>
