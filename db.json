@@ -8,6 +8,15 @@
       "empresa": "Cliker",
       "puesto": "Desarrollador web",
       "id": 1
+    },
+    {
+      "nombre": "Ricardo",
+      "apellido": "Alonzo",
+      "email": "leonardo.a@cliker.mx",
+      "telefono": "999-999-9999",
+      "empresa": "Cliker",
+      "puesto": "Desarrollador",
+      "id": 2
     }
   ]
 }
