@@ -12,6 +12,9 @@
     })
 
     const router = useRouter()
+    const route = useRoute()
+
+    const { id } = route.params
 
     const handleSubmit = (data) => {
         
