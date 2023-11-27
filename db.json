@@ -3,20 +3,12 @@
     {
       "nombre": "Leonardo",
       "apellido": "Alonzo",
-      "email": "leonardo.a@cliker.mx",
+      "email": "leonardo.a@leo.com",
       "telefono": "999-999-9999",
-      "empresa": "Cliker",
-      "puesto": "Desarrollador web",
+      "empresa": "Leo SA",
+      "puesto": "Desarrollador Web",
+      "estado": 1,
       "id": 1
-    },
-    {
-      "nombre": "Ricardo",
-      "apellido": "Alonzo",
-      "email": "leonardo.a@cliker.mx",
-      "telefono": "999-999-9999",
-      "empresa": "Cliker",
-      "puesto": "Desarrollador",
-      "id": 2
     }
   ]
 }

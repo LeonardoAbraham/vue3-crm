@@ -1,5 +1,5 @@
 <script setup>
-    import axios from '../lib/axios'
+    import ClienteService from '../services/ClienteService';
     import { FormKit } from '@formkit/vue'
     import { useRoute, useRouter } from 'vue-router';
     import RouterLink from '../components/UI/RouterLink.vue';
@@ -14,7 +14,8 @@
     const router = useRouter()
 
     const handleSubmit = (data) => {
-        axios.post('/clientes', data)
+        data.estado = 1
+        ClienteService.agregarCliente(data)
             .then(respuesta => {
                 //Redireccionar
                 router.push({name:'listado-clientes'})
