@@ -1,5 +1,5 @@
 <script setup>
-    import { onMounted } from 'vue';
+    import { onMounted, reactive } from 'vue';
     import ClienteService from '../services/ClienteService';
     import { FormKit } from '@formkit/vue'
     import { useRoute, useRouter } from 'vue-router';
@@ -17,9 +17,13 @@
 
     const { id } = route.params
 
+    const formData = reactive({})
+
     onMounted(() => {
         ClienteService.obtenerCliente(id)
-            .then(({data}) => console.log(data))
+            .then(({data}) => {
+                Object.assign(formData, data)
+            })
             .catch(error => console.log(error))
     })
 
@@ -44,6 +48,7 @@
                     submit-label="Agregar Cliente"
                     incomplete-message="No se pudo enviar, revisa los mensajes"
                     @submit="handleSubmit"
+                    :value="formData"
                 >
                     <FormKit 
                         type="text"
@@ -52,6 +57,7 @@
                         placeholder="Nombre de Cliente"
                         validation="required"
                         :validation-messages="{required:'El Nombre del Cliente es Obligatorio'}"
+                        v-model="formData.nombre"
                     />
 
                     <FormKit 
@@ -61,6 +67,7 @@
                         placeholder="Apellido de Cliente"
                         validation="required"
                         :validation-messages="{required:'El Apellido del Cliente es Obligatorio'}"
+                        v-model="formData.apellido"
                     />
 
                     <FormKit 
@@ -70,6 +77,7 @@
                         placeholder="Email de Cliente"
                         validation="required|email"
                         :validation-messages="{required:'El Email del Cliente es Obligatorio', email:'Coloca un Email Válido'}"
+                        v-model="formData.email"
                     />
 
                     <FormKit 
@@ -79,6 +87,7 @@
                         placeholder="Télefono: XXX-XXX-XXXX"
                         validation="?matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/"
                         :validation-messages="{matches:'El Formato no es Válido'}"
+                        v-model="formData.telefono"
                     />
 
                     <FormKit 
@@ -86,6 +95,7 @@
                         label="Empresa"
                         name="empresa"
                         placeholder="Empresa de Cliente"
+                        v-model="formData.empresa"
                     />
 
                     <FormKit 
@@ -93,6 +103,7 @@
                         label="Puesto"
                         name="puesto"
                         placeholder="Puesto de Cliente"
+                        v-model="formData.puesto"
                     />
 
                     <!-- 
