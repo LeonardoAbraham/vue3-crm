@@ -7,7 +7,7 @@
       "telefono": "999-999-9999",
       "empresa": "Leo SA",
       "puesto": "Desarrollador Web",
-      "estado": 1,
+      "estado": true,
       "id": 1
     },
     {
@@ -17,7 +17,7 @@
       "telefono": "999-999-9999",
       "empresa": "Leo SA",
       "puesto": "Desarrollador Web",
-      "estado": 0,
+      "estado": false,
       "id": 2
     }
   ]
