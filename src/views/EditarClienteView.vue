@@ -1,4 +1,5 @@
 <script setup>
+    import { onMounted } from 'vue';
     import ClienteService from '../services/ClienteService';
     import { FormKit } from '@formkit/vue'
     import { useRoute, useRouter } from 'vue-router';
@@ -15,6 +16,12 @@
     const route = useRoute()
 
     const { id } = route.params
+
+    onMounted(() => {
+        ClienteService.obtenerCliente(id)
+            .then(({data}) => console.log(data))
+            .catch(error => console.log(error))
+    })
 
     const handleSubmit = (data) => {
         
