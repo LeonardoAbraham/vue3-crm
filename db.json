@@ -9,6 +9,16 @@
       "puesto": "Desarrollador Web",
       "estado": 1,
       "id": 1
+    },
+    {
+      "nombre": "Leonardo",
+      "apellido": "Alonzo",
+      "email": "leonardo.a@leo.com",
+      "telefono": "999-999-9999",
+      "empresa": "Leo SA",
+      "puesto": "Desarrollador Web",
+      "estado": 0,
+      "id": 2
     }
   ]
 }
